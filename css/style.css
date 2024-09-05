@@ -1,0 +1,557 @@
+:root {
+    --color-black-transparent-02: rgb(53, 137, 161);
+    --color-black-transparent-03: rgb(122, 173, 187);
+    --color-black-transparent-05: rgb(152, 195, 76);
+    --color-black-transparent-08: rgb(244, 242, 242);
+    --color-blue-transparent-08: rgb(24, 153, 154);
+    --color-primary: rgb(79, 66, 66); 
+    --color-secondary: #ffffff; 
+  }
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Cintillo en la parte superior */
+.cintillo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-black-transparent-02);
+    color: var(--color-secondary);
+    
+}
+.favicon_cintillo_1, .favicon_cintillo_2{
+    height: 17px;
+    margin: 10px 10px 3px 3px;
+    
+}
+
+.favicon_cintillo_3{
+    height: 17px;
+    margin: 10px 10px 3px 3px;
+    
+}
+.favicon_menu{
+    height: 9px;
+    margin: 2px;
+}
+.parte-izquierda, .parte-centro {
+    flex: 2;
+    text-align: center;
+}
+
+
+/* Parte derecha con color diferente */
+.parte-derecha {
+   
+    flex: 1;
+    text-align: center;
+    background-color: var(--color-black-transparent-05); /* Cambia el color aquí */
+    color: var(--color-secondary);
+    padding: 9px;
+ 
+    font-size: 20px;
+
+}
+
+p {
+    margin: 0;
+}
+
+/* Estilos para el menú de navegación */
+nav.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding: 15px 30px;
+    border-bottom: 2px solid #ddd;
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+.logo img {
+    height: 60px;
+    margin-left: 50px;
+    
+}
+
+ul.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul.nav-links li {
+    margin: 0 35px;
+}
+
+ul.nav-links li a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+ul.nav-links li a:hover {
+    color: var(--color-black-transparent-05);
+}
+
+.menu-icons {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon, .sandwich-menu {
+    font-size: 24px;
+    margin-left: 90px;
+    text-decoration: none;
+    color: #333;
+}
+
+.search-icon:hover, .sandwich-menu:hover {
+    color: #484e54;
+}
+
+.banner {
+    background-color: var(--color-black-transparent-08); /* Color de fondo del banner */
+    color: var(--color-primary);
+    padding: 250px 20px;
+    text-align: left;
+    height: 100px; /* Ajusta la altura según tu diseño */
+    flex-direction: column;
+   
+}
+.titulo {
+    font-size: 70px;
+    margin: 0px;
+    text-align: left;
+    margin-left: 150px;
+}
+
+.descripcion {
+    font-size: 1.2em;
+    margin: 10px;
+    margin-left: 150px;
+}
+
+/* Estilo de la imagen dentro del banner */
+.banner-imagen {
+
+    position: absolute;
+    top: 56%;
+    left: 65%;
+    transform: translate(-20%, -50%);
+    max-width: 200rem; /* Ajusta según el tamaño deseado */
+    height: 550px;
+    z-index: 0; /* Asegura que la imagen superpuesta esté detrás del contenido del banner */
+    }
+
+/* Estilo del botón */
+.boton_1 {
+    display: inline-block;
+    padding: 3px 40px;
+    font-size: 13px;
+    color: var(--color-secondary);
+    background-color: var(--color-black-transparent-03);
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 14px 0px;
+    margin-left: 150px;
+    
+}
+/* From Uiverse.io by Creatlydev */ 
+.button {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: var(--color-black-transparent-02);
+    color: #fff;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: .65rem 1.9rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color .3s;
+    margin-left: 150px;
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--color-black-transparent-05);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    background-color: var(--color-black-transparent-05);
+  }
+  
+  .button:hover .button__icon-wrapper {
+    color: var(--color-black-transparent-02);
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button:hover .button__icon-svg:first-child {
+    transition: transform .3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button:hover .button__icon-svg--copy {
+    transition: transform .3s ease-in-out .1s;
+    transform: translate(0);
+  }
+
+
+
+/* Estilo para los favicones */
+.favicons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.favicons link {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* From Uiverse.io by Satwinder04 */ 
+ 
+
+.loader-container {
+    position: absolute;
+    top: 56%;
+    left: 59%;
+    transform: translate(-20%, -50%);
+    max-width: 200rem; /* Ajusta según el tamaño deseado */
+    height: 50px;
+    z-index: 0; /* Asegura que la imagen superpuesta esté detrás del contenido del banner */
+    }
+
+    
+
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: rotate(45deg);
+  }
+  
+  .loader-inner {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--color-black-transparent-05);
+    animation: loader_05101 1.2s linear infinite;
+  }
+  
+  .loader-inner:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+  }
+  
+  .loader-inner:nth-child(2) {
+    top: 0;
+    left: 1.5rem;
+    animation-delay: 0.1s;
+  }
+  
+  .loader-inner:nth-child(3) {
+    top: 0;
+    left: 3rem;
+    animation-delay: 0.2s;
+  }
+  
+  .loader-inner:nth-child(4) {
+    top: 1.5rem;
+    left: 0;
+    animation-delay: 0.3s;
+  }
+  
+  .loader-inner:nth-child(5) {
+    top: 1.5rem;
+    left: 1.5rem;
+    animation-delay: 0.4s;
+  }
+  
+  .loader-inner:nth-child(6) {
+    top: 1.5rem;
+    left: 3rem;
+    animation-delay: 0.5s;
+  }
+  
+  .loader-inner:nth-child(7) {
+    top: 3rem;
+    left: 0;
+    animation-delay: 0.6s;
+  }
+  
+  .loader-inner:nth-child(8) {
+    top: 3rem;
+    left: 1.5rem;
+    animation-delay: 0.7s;
+  }
+  
+  .loader-inner:nth-child(9) {
+    top: 3rem;
+    left: 3rem;
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes loader_05101 {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  .cintillo_1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-secondary); /* Cambia el color según tu diseño */
+    color: var(--color-primary);
+    padding: px;
+    margin-left: 100px;
+    
+     /* Espacio entre el banner y el cintillo */
+}
+
+.img_cintillo {
+    height: 200px;
+    right: 250px;
+    
+}
+
+
+.float_1 {
+    position: absolute;
+    top: 101%;
+    left: 10%;
+    transform: translate(-20%, -50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+    height: 100px;
+    right: 10px; /* Asegura que los favicons flotantes estén sobre el cintillo */
+}
+.float_2 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1; /* Asegura que los favicons flotantes estén sobre el cintillo */
+}
+.float_3 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1; /* Asegura que los favicons flotantes estén sobre el cintillo */
+}
+.titulo-flotante_1 {
+    position: absolute;
+    top: 97%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: var(--color-primary); /* Ajusta el color del texto según tu diseño */
+    z-index: 2; /* Asegura que el texto flotante esté sobre los favicons */
+}
+/* From Uiverse.io by Saiyed-Tanvir */ 
+.loader_2{
+    position: absolute;
+    top: 39%;
+    left: 89%;
+    transform: translate(-20%, -50%);
+    max-width: 200rem; /* Ajusta según el tamaño deseado */
+    height: 50px;
+    z-index: 0; /* Asegura que la imagen superpuesta esté detrás del contenido del banner */
+    }
+
+
+.quater {
+    height: 1.6cm;
+    width: 1.5cm;
+    background-color: var(--color-black-transparent-05);
+    float: left;
+    position: relative;
+    bottom: 1.25cm;
+  }
+  
+  .i {
+    border-top-left-radius: 100%;
+    animation: spin1 4s ease-in-out infinite;
+    transform-origin: 1.5cm 1.5cm;
+  }
+  
+  .ii {
+    border-top-right-radius: 100%;
+    animation: spin2 4s ease-in-out infinite;
+    transform-origin: 0 1.5cm;
+  }
+  
+  @keyframes spin1 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+  
+    25% {
+      transform: rotateZ(0deg);
+    }
+  
+    50% {
+      transform: rotateZ(180deg);
+    }
+  
+    75% {
+      transform: rotateZ(180deg);
+    }
+  
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  @keyframes spin2 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+  
+    25% {
+      transform: rotateZ(180deg);
+    }
+  
+    50% {
+      transform: rotateZ(180deg);
+    }
+  
+    75% {
+      transform: rotateZ(360deg);
+    }
+  
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+
+
+
+@media (max-width: 768px) {
+    .cintillo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .favicon_cintillo_1, .favicon_cintillo_2, .favicon_cintillo_3 {
+        height: 15px;
+        margin: 5px;
+    }
+
+    .banner {
+        padding: 50px 10px;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .descripcion {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    ul.nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul.nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icons {
+        flex-direction: column;
+    }
+
+    .search-icon, .sandwich-menu {
+        margin: 5px 0;
+    }
+
+    .cintillo_1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .img_cintillo {
+        height: 150px;
+    }
+
+    .float_1, .float_2, .float_3 {
+        position: static;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .float_2 {
+        top: auto;
+    }
+
+    .float_3 {
+        top: auto;
+    }
+
+    .titulo-flotante_1 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .descripcion {
+        font-size: 0.9rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .search-icon, .sandwich-menu {
+        font-size: 20px;
+    }
+}
