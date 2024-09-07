@@ -1,91 +1,478 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
-    <title>ASWS</title>
-</head>
-<body>
-    <div class="cintillo">
-        <div class="parte-izquierda">
-            <p><img src="img/favicon (5).ico" alt="" class="favicon_cintillo_1">223 Avenue, Bayamon, Puerto Rico</p>
-        </div>
-        <div class="parte-centro">
-            <p><img src="img/favicon (8).ico" alt="" class="favicon_cintillo_2">customerservice@aswspr.com</p>
-        </div>
-        <div class="parte-derecha">
-            <p><a href="dd" class="free"><img src="img/favicon (9).ico" alt="" class="favicon_cintillo_3">Free Consulting</a></p>
+  <html> 
+    <head>
+        <link rel="icon" type="image/x-icon" href="/design-system/docs/templates/previews/_templates_assets/favicon.D_Q_lIO5.ico">
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css">
+        <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-utils@latest/dist/all.css">
+        <link rel="stylesheet" href="/design-system/docs/templates/previews/_templates_assets/automotive-industry.DVDYuVKt.css">
+        <link rel="stylesheet" href="/design-system/docs/templates/previews/_templates_assets/saas-product.CLAgbliw.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head> 
+    <body id="div-body" class="k-body">  
+        <style>astro-island,astro-slot,astro-static-slot{display:contents}</style>
+        <script>
+        // Función de carga de Astro
+(() => {
+  const load = async (fn) => {
+    await (await fn())();
+  };
+  (self.Astro || (self.Astro = {})).load = load;
+  window.dispatchEvent(new Event("astro:load"));
+})();
+
+// Definición de la clase AstroIsland y funciones relacionadas
+(() => {
+  // Función auxiliar para definir propiedades
+  const defineProperty = (obj, key, value) => {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        enumerable: true,
+        configurable: true,
+        writable: true,
+        value: value
+      });
+    } else {
+      obj[key] = value;
+    }
+  };
+
+  // Funciones para deserializar datos
+  const deserializers = {
+    0: (v) => deserializeObject(v),
+    1: (v) => deserializeArray(v),
+    2: (v) => new RegExp(v),
+    3: (v) => new Date(v),
+    4: (v) => new Map(deserializeArray(v)),
+    5: (v) => new Set(deserializeArray(v)),
+    6: (v) => BigInt(v),
+    7: (v) => new URL(v),
+    8: (v) => new Uint8Array(v),
+    9: (v) => new Uint16Array(v),
+    10: (v) => new Uint32Array(v)
+  };
+
+  const deserialize = ([type, value]) => {
+    return type in deserializers ? deserializers[type](value) : undefined;
+  };
+
+  const deserializeArray = (array) => array.map(deserialize);
+
+  const deserializeObject = (obj) => {
+    if (typeof obj !== "object" || obj === null) return obj;
+    return Object.fromEntries(
+      Object.entries(obj).map(([key, value]) => [key, deserialize(value)])
+    );
+  };
+
+  // Definición de la clase AstroIsland
+  class AstroIsland extends HTMLElement {
+    constructor() {
+      super(...arguments);
+      defineProperty(this, "Component");
+      defineProperty(this, "hydrator");
+      defineProperty(this, "hydrate", async () => {
+        // Lógica de hidratación
+        // ...
+      });
+      defineProperty(this, "unmount", () => {
+        if (!this.isConnected) {
+          this.dispatchEvent(new CustomEvent("astro:unmount"));
+        }
+      });
+    }
+
+    disconnectedCallback() {
+      document.removeEventListener("astro:after-swap", this.unmount);
+      document.addEventListener("astro:after-swap", this.unmount, { once: true });
+    }
+
+    connectedCallback() {
+      // Lógica de conexión
+      // ...
+    }
+
+    async childrenConnectedCallback() {
+      // Lógica de conexión de hijos
+      // ...
+    }
+
+    async start() {
+      // Lógica de inicio
+      // ...
+    }
+
+    attributeChangedCallback() {
+      this.hydrate();
+    }
+  }
+
+  defineProperty(AstroIsland, "observedAttributes", ["props"]);
+
+  // Registrar el elemento personalizado si aún no está definido
+  if (!customElements.get("astro-island")) {
+    customElements.define("astro-island", AstroIsland);
+  }
+})();
+        </script>
+        <astro-island uid="1kgzTf" prefix="r0" component-url="/design-system/docs/templates/previews/_templates_assets/App.CcwoAYVl.js" component-export="default" renderer-url="/design-system/docs/templates/previews/_templates_assets/client.tVzmLwyu.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Template&quot;,&quot;value&quot;:true}" await-children="">
+            <div class="k-appbar k-appbar-top k-appbar-static k-appbar-inherit k-pos-relative" style="box-shadow:none" id=":r0R1:"><div class="k-appbar-section k-container !k-flex-row k-px-4">
+                <div class="k-d-flex k-flex-basis-0 k-flex-grow">
+                    <a class="k-d-flex" href="#"><img src="img/favicon (12).ico" alt="Logo" class="logo-large"/></a>
+               </div>
+            <div  class="k-d-none k-d-lg-flex k-flex-basis-0 k-flex-grow k-justify-content-center">
+                <div id=":r0R2h:"><ul class="k-reset k-header k-menu k-menu-horizontal" role="menubar">
+                    <li id=":r0R2h:_0" class="k-item k-menu-item k-first" tabindex="0" role="menuitem" aria-label="Home"><span class="k-link k-menu-link" role="presentation">
+                        <span id="div-home" class="k-menu-link-text">Inicio</span>
+                    </span>
+                </li>
+                <li id=":r0R2h:_1" class="k-item k-menu-item" tabindex="-1" role="menuitem" aria-label="About">
+                            <span class="k-link k-menu-link" role="presentation">
+                                <span id="div-home" class="k-menu-link-text">Servicios</span>
+                            </span>
+                        </li>
+                        <li id=":r0R2h:_2" class="k-item k-menu-item" tabindex="-1" role="menuitem" aria-label="Solutions">
+                            <span class="k-link k-menu-link" role="presentation">
+                                <span id="div-home" class="k-menu-link-text">Quienes Somos</span>
+                            </span>
+                        </li>
+                <li id=":r0R2h:_5" class="k-item k-menu-item k-last" tabindex="-1" role="menuitem" aria-label="Testimonials">
+                    <span class="k-link k-menu-link" role="presentation">
+                        <span id="div-home" class="k-menu-link-text">Contacto</span>
+                    </span>
+                </li>
+            </ul>
         </div>
     </div>
-
-    <nav class="menu">
-        <div class="logo">
-            <img src="img/PR-removebg-preview.png" alt="Logo">
+    <div class="k-d-none k-d-lg-flex k-flex-basis-0 k-flex-grow k-justify-content-end">
+        <div class="k-d-flex k-align-items-center k-gap-2.5">
+            <button id="btn-one" class="k-button k-button-sm k-button-solid k-button-solid-primary k-rounded-md">
+                <span class="k-button-text">Solicita una Demo</span></button>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Home<img src="img/favicon (10).ico" alt="" class="favicon_menu"></a></li>
-            <li><a href="#">About Us<img src="img/favicon (10).ico" alt="" class="favicon_menu"></a></li>
-            <li><a href="#">Services<img src="img/favicon (10).ico" alt="" class="favicon_menu"></a></li>
-            <li><a href="#">Contac<img src="img/favicon (10).ico" alt="" class="favicon_menu"></a></li>
-        </ul>
-        <div class="menu-icons">
-            <a href="#" class="search-icon">🔍</a>
-            <a href="#" class="sandwich-menu">☰</a>
+        <div class="k-d-lg-none k-d-flex k-flex-basis-0 k-flex-grow k-justify-content-end">
+            <button class="k-button k-button-md k-button-flat k-button-flat-primary k-rounded-md k-icon-button">
+                <span class="k-icon k-svg-icon k-svg-i-menu k-button-icon" aria-hidden="true">
+                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 32v96H32V32zM32 192v96h448v-96zm448 160H32v96h448z" />
+                    </svg>
+                </span>
+            </button>
         </div>
-    </nav>
-    <img src="img/asws-removebg-preview.png" alt="Imagen del Banner" class="banner-imagen">
-    <div class="banner">
-        
-        <a href="#" class="boton_1">We ARE EXPERT IN THIS FIELD</a>
-        <h1 class="titulo">Advancing Ideas Into <br> The Next Level</h1>
-        <p class="descripcion">Advance Software Solution All Compatible with Labor <br> Laws and Reforms </p>
-        
-        
-        
-        <a style="--clr: #7808d0" class="button" href="#">
-            <span class="button__icon-wrapper">
-                <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
-                    <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
-                </svg>
+    </div>
+</div>
+<section class="k-bg-surface k-py-8 k-py-md-10 k-py-lg-25">
+    <div class="k-container !k-flex-row k-gap-5 k-px-4">
+        <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-12 k-gap-md-10">
+            <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-5 k-gap-sm-6 k-gap-md-12">
+                <div class="k-d-flex k-flex-col k-gap-4"><h1 class="k-h1 !k-m-0">Automatiza y Crece con Nuestro ERP Eficaz</h1></h1><p class="k-font-size-lg !k-m-0">Optimiza cada proceso de tu empresa y mejora tus resultados con una solución ERP personalizada para tus necesidades específicas, asegurando una integración perfecta y una mayor eficiencia en todas las áreas.</p>
+                </div>
+                <div class="k-d-flex k-flex-col k-flex-sm-row k-align-items-start k-gap-5">
+                    <button id="btn-one" class="k-button k-button-lg k-button-solid k-button-solid-primary k-rounded-md !k-line-height-md">
+                        <span class="k-button-text">Prueba Gratis</span>
+                    </button>
+                </div>
+            </div>
+            <div class="k-d-flex k-flex-col k-gap-5"><div class="k-d-flex k-flex-col k-flex-sm-row k-gap-5">
+                <div class="k-d-flex k-align-items-center k-gap-2.5">
+                    <span class="k-icon k-svg-icon k-svg-i-check k-color-tertiary" aria-hidden="true">
+                        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" />
+                        </svg>
+                    </span>
+                    <div class="k-color-subtle">Gratis 30-dias</div>
+                </div>
+                <div class="k-d-flex k-align-items-center k-gap-2.5">
+                    <span class="k-icon k-svg-icon k-svg-i-check k-color-tertiary" aria-hidden="true">
+                        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" />
+                        </svg>
+                    </span>
+                    <div class="k-color-subtle">Soporte 12/7
+                    </div>
+                </div>
+            </div>
+            <div class="k-d-flex k-flex-col k-flex-sm-row k-gap-5">
+                <div class="k-d-flex k-align-items-center k-gap-2.5">
+                    <span class="k-icon k-svg-icon k-svg-i-check k-color-tertiary" aria-hidden="true">
+                        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" />
+                        </svg>
+                    </span>
+                    <div class="k-color-subtle">Cancela en cualquier momento</div>
+                </div>
+                <div class="k-d-flex k-align-items-center k-gap-2.5">
+                    <span class="k-icon k-svg-icon k-svg-i-check k-color-tertiary" aria-hidden="true">
+                        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" />
+                        </svg>
+                    </span>
+                    <div class="k-color-subtle">No se requiere tarjeta de crédito</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center">
+                        <img src="img/banner1.png" alt="Image" style="display:block;max-width:100%;height:auto;object-fit:contain"/>
+                    </div>
+                </div>
+            </section>
+            <section class="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24"><div class="k-container k-gap-5 k-gap-md-10 k-gap-lg-14 k-align-items-center k-px-4">
+                <div class="k-d-flex k-flex-col k-align-items-center k-gap-4">
+                    <h2 id="title-dos" class="k-h2 !k-m-0 k-color-primary k-text-center">Obtén control y visibilidad total sobre todas tus operaciones empresariales.</h2>
+                </div>
+                <div class="k-d-flex k-flex-col k-gap-5">
+                    <div class="k-d-grid k-grid-cols-1 k-grid-cols-sm-2 k-grid-cols-md-3 k-gap-4 k-gap-lg-5">
+                        <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4 k-p-6 k-bg-surface k-rounded-md">
+                            <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/grafica.png);background-repeat:no-repeat;background-position:center center">
+                            </div>
+                            <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4">
+                                <div class="k-d-flex k-font-size-xl">Negocio en Crecimiento</div>
+                                <div class="k-d-flex">
+                                    <p class="k-color-subtle !k-m-0">Nuestro servicio de Crecimiento Empresarial está enfocado en hacer que su negocio crezca y prospere. </p>
+                                </div>
+                                <div class="k-d-flex">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4 k-p-6 k-bg-surface k-rounded-md">
+                            <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/ventas.png);background-repeat:no-repeat;background-position:center center">
+                            </div>
+                            <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4">
+                                <div class="k-d-flex k-font-size-xl">Investigación Financiera</div>
+                                <div class="k-d-flex"><p class="k-color-subtle !k-m-0">Nuestra Investigación Financiera le brinda las herramientas necesarias para optimizar sus inversiones.</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4 k-p-6 k-bg-surface k-rounded-md">
+                            <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/money.png);background-repeat:no-repeat;background-position:center center">
+                            </div>
+                            <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4">
+                                <div class="k-d-flex k-font-size-xl">Impuestos</div>
+                                <div class="k-d-flex">
+                                    <p class="k-color-subtle !k-m-0">Cumplimiento Tributario y Optimización de Cargas Fiscales</p>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
+    <div class="k-container !k-flex-row k-gap-5 k-gap-md-10 k-gap-lg-14 k-flex-wrap k-px-4"><div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-14">
+        <div class="k-d-flex k-flex-col k-gap-4">
+            <h2 id="title-module" class="k-h2 !k-m-0 k-color-primary">Tiempo y Asistencia <hr></h2> 
+            <p id="texto-module" class="k-font-size-lg k-color-subtle !k-m-0">Nuestro modulo de Tiempo y Asistencia optimiza la gestión del personal, permitiéndote registrar y monitorear las horas trabajadas de manera precisa y eficiente. Con esta herramienta, reducirás errores administrativos, automatizarás el cálculo de horas extras y permisos, y mejorarás la productividad al tener un control total sobre la asistencia de tu equipo. Además, su interfaz intuitiva facilita la implementación y el uso diario, asegurando que tu empresa cumpla con las normativas laborales sin esfuerzo adicional.</p>
+        </div>
+        <div class="k-d-flex k-flex-col k-gap-10">
+            <div class="k-d-flex k-gap-4">
+                <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/Huella.png);background-repeat:no-repeat;background-position:center center">
+                </div><div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-2">
+                    <div id="color-subtitulos" class="k-d-flex k-font-size-lg k-color-primary">Sistema de control de asistencia</div>
+                    <div class="k-d-flex"><p class="!k-m-0">Nuestro sistema de control de asistencia con reconocimiento de huella dactilar, respaldado por servidores dedicados, está diseñado para ofrecer una solución personalizada a las necesidades de tu empresa. No solo permite a los empleados registrar su asistencia de manera segura desde cualquier lugar, incluso en trabajos remotos, sino que también ofrece opciones adicionales como la elección de ubicación, captura de foto y más, asegurando un control total y preciso de las horas trabajadas.<!-- --> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="k-d-flex k-gap-4">
+                <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/tarjetas.png);background-repeat:no-repeat;background-position:center center">
+                </div>
+                <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-2">
+                    <div id="color-subtitulos" class="k-d-flex k-font-size-lg k-color-primary">Tarjetas de control</div>
+                    <div class="k-d-flex"><p class="!k-m-0">Nuestras tarjetas de control de asistencia están diseñadas para facilitar el cálculo automático de horas extras y la gestión de impuestos. Con esta herramienta, puedes registrar de manera precisa el tiempo adicional trabajado por cada empleado, asegurando que se paguen las horas extras conforme a las normativas laborales. Además, nuestro sistema se integra con módulos de cálculo de impuestos, permitiendo una gestión fiscal eficiente y libre de errores, optimizando el proceso de nómina y cumplimiento tributario.<!-- --> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center">
+        <img src="img/pc.png" alt="Imagen de Pc" style="display:block;max-width:100%;height:auto;object-fit:contain"/>
+    </div>
+</div>
+</section>
+<section class="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
+    <div class="k-container !k-flex-row k-gap-5 k-gap-md-10 k-gap-lg-14 k-flex-wrap k-px-4">
+        <div class="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center"><img src="img/tablet.png" alt="Image" style="display:block;max-width:100%;height:auto;object-fit:contain"/></div>
+        <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-14"><div class="k-d-flex k-flex-col k-gap-4">
+            <h2 id="title-module" class="k-h2 !k-m-0 k-color-primary">Nómina <hr> </h2> <p class="k-font-size-lg k-color-subtle !k-m-0">La nómina es una parte integral de la gestión empresarial que impacta en la operativa diaria y en la satisfacción de los empleados. Con ASWS, su empresa puede disfrutar de una administración de nómina precisa, eficiente y adaptada a sus necesidades, asegurando así un funcionamiento más fluido y beneficioso para su organización.</p>
+         </div>
+            <div class="k-d-flex k-flex-col k-gap-10"><div class="k-d-flex k-gap-4">
+                <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/nominas.png);background-repeat:no-repeat;background-position:center center">
+                </div>
+                <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-2">
+                    <div id="color-subtitulos" class="k-d-flex k-font-size-lg k-color-primary">Las deducciones legales</div>
+                <div class="k-d-flex"><p class="!k-m-0">Las deducciones legales son una de nuestras principales prioridades. Esto incluye impuestos sobre la renta y las contribuciones a la seguridad social, que abarcan pensiones, seguro de salud y desempleo. Estas deducciones son esenciales para cumplir con las normativas vigentes y garantizar que todos nuestros empleados estén cubiertos adecuadamente.<!-- --> </p></div>
+            </div>
+        </div>
+        <div  class="k-d-flex k-gap-4">
+            <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/caja.png);background-repeat:no-repeat;background-position:center center"></div>
+        <div  class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-2">
+            <div id="color-subtitulos"  class="k-d-flex k-font-size-lg k-color-primary">Compromiso con la Puntualidad en los Pagos</div><div class="k-d-flex"><p class="!k-m-0">Nuestra infraestructura de gestión de nómina está diseñada para procesar cada transacción de forma eficiente, asegurando que los pagos a empleados, proveedores y cualquier otra parte interesada se efectúen según lo programado. Utilizamos tecnología avanzada y prácticas rigurosas de control para minimizar cualquier riesgo de retraso, lo que le brinda la tranquilidad de que sus pagos serán realizados puntualmente.<!-- --> </p></div>
+    </div>
+    
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
+    <div class="k-container !k-flex-row k-gap-5 k-gap-md-10 k-gap-lg-14 k-flex-wrap k-px-4"><div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-14">
+        <div class="k-d-flex k-flex-col k-gap-4">
+            <h2 id="title-module" class="k-h2 !k-m-0 k-color-primary">Ordenes de Venta<hr></h2> 
+            <p id="texto-module" class="k-font-size-lg k-color-subtle !k-m-0">Con nuestra solución, podrá seguir el estado de sus órdenes en tiempo real, automatizar tareas repetitivas y generar informes detallados que le ayudarán a tomar decisiones informadas. Deje que nuestra tecnología se encargue de las complejidades, para que usted pueda concentrarse en lo que realmente importa: crecer y servir a sus clientes.</p>
+        </div>
+        <div class="k-d-flex k-flex-col k-gap-10">
+            <div class="k-d-flex k-gap-4">
+                <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/facturas.png);background-repeat:no-repeat;background-position:center center">
+                </div><div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-2">
+                    <div id="color-subtitulos" class="k-d-flex k-font-size-lg k-color-primary">Facturación</div>
+                    <div class="k-d-flex"><p class="!k-m-0">Reduciendo el riesgo de errores y garantizando la seguridad de sus datos. Además, nuestro sistema le permite generar reportes detallados, facilitando el seguimiento y análisis de sus operaciones financieras. Con esta solución, no solo optimiza el tiempo dedicado a la facturación, sino que también obtiene una visión clara y precisa de su situación económica.
+                        <!-- --> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="k-d-flex k-gap-4">
+                <div id="div-card" class="k-bg-tertiary k-rounded-lg" style="width:110px;height:105px;background-image:url(img/ecommerce.png);background-repeat:no-repeat;background-position:center center">
+                </div>
+                <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-2">
+                    <div id="color-subtitulos" class="k-d-flex k-font-size-lg k-color-primary">Plataformas Externas </div>
+                    <div class="k-d-flex"><p class="!k-m-0">Nuestro sistema de facturación se integra perfectamente con plataformas de e-commerce, permitiendo generar facturas directamente desde sistemas externos. Esta integración facilita la gestión de facturación al sincronizar automáticamente los datos de ventas y pedidos, lo que ahorra tiempo y minimiza errores. Con nuestra solución, puede gestionar todas sus transacciones de e-commerce y emitir facturas de forma rápida y segura, sin necesidad de procesos manuales adicionales<!-- --> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center">
+        <img src="img/pcescritorio.png" alt="Imagen de Pc" style="display:block;max-width:100%;height:auto;object-fit:contain"/>
+    </div>
+</div>
+</section>
+<section class="k-bg-surface k-py-8 k-py-md-15 k-py-lg-24">
+    <div class="k-container k-gap-5 k-gap-md-10 k-gap-lg-14 k-align-items-center k-px-4">
+        <div  class="k-d-flex k-flex-col k-align-items-center k-gap-4"><h2 id="title-module" class="k-h2 !k-m-0 k-color-primary k-text-center">Elige la oferta que más te convenga</h2><p class="k-font-size-lg k-text-center k-color-subtle !k-m-0">Contamos con una amplia gama de módulos y servicios que enriquecen nuestra oferta. Nuestra empresa se destaca en Estados Unidos y Puerto Rico, siendo pioneros en el sector con un software que lleva más de 20 años perfeccionando sus procesos día a día. Nos enorgullece ofrecer soluciones avanzadas que responden a las necesidades actuales del mercado, siempre con un enfoque en la innovación y la mejora continua.</p>
+        </div>
+        <div class="k-d-grid k-grid-cols-1 k-grid-cols-sm-2 k-grid-cols-md-4 k-align-items-end k-gap-4 k-gap-lg-5 k-w-full k-flex-wrap k-justify-content-center">
+            <div  class="k-d-flex k-flex-col k-bg-surface-alt k-elevation-1 k-rounded-lg k-overflow-hidden" style="min-height:665px">
+                <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-justify-content-between k-p-6" style="height:100%">
+                    <div class="k-d-flex k-flex-col k-gap-2">
+                        <div class="k-d-flex k-align-items-center k-gap-3">
+                        </div>
+                        <div class="k-d-flex k-align-items-center k-gap-3">
+                        </div>
+                        <div class="k-d-flex k-align-items-center k-gap-3">
+                        </div></div><div class="k-d-flex k-flex-col k-gap-6"><div class="k-d-flex k-flex-col k-text-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="k-d-flex k-flex-col k-bg-surface-alt k-elevation-1 k-rounded-lg k-overflow-hidden" style="min-height:665px">
+                    <div id="div-card_2" class="k-d-flex k-flex-col k-align-items-center k-justify-content-center k-p-6 k-bg-primary"><h5 class="k-h5 k-color-white !k-m-0">Precio por Módulo Individual</h5>
+                    </div>
+                    <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-justify-content-between k-p-6" style="height:100%">
+                        <div class="k-d-flex k-flex-col k-gap-2"><div class="k-d-flex k-align-items-center k-gap-3"><span class="k-icon k-svg-icon k-svg-i-check k-color-primary" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+                            <div>Modulo</div>
+                        </div>
+                        <div class="k-d-flex k-align-items-center k-gap-3"><span class="k-icon k-svg-icon k-svg-i-check k-color-primary" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+                            <div>Sitio Web</div>
+                    </div>
+                <div class="k-d-flex k-align-items-center k-gap-3"><span class="k-icon k-svg-icon k-svg-i-check k-color-primary" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+                    <div>Capacitacion</div>
+                </div>
+            </div>
+            <div class="k-d-flex k-flex-col k-gap-6"><div class="k-d-flex k-flex-col k-text-center"><h3 class="k-h3 !k-m-0">$35</h3>
+                    <div class="k-font-size-sm k-color-subtle">Mensuales</div>
+                </div><button id="btn-one" class="k-button k-button-lg k-button-solid k-button-solid-tertiary k-rounded-md"><span class="k-button-text">Buy Now</span></button>
+            </div>
+        </div>
+    </div>
+    <div  class="k-d-flex k-flex-col k-bg-surface-alt k-elevation-1 k-rounded-lg k-overflow-hidden" style="min-height:695px"><div id="div-card_2" class="k-d-flex k-flex-col k-align-items-center k-justify-content-center k-gap-2 k-p-6 k-bg-primary"><span class="k-badge-container" style="display:inline-block"><span class="k-badge k-badge-md k-badge-solid k-badge-solid-tertiary k-top-end">Most Popular</span>
+    </span>
+        <h5  class="k-h5 k-color-white !k-m-0">Combo de Módulos</h5>
+    </div>
+    <div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-justify-content-between k-p-6" style="height:100%"><div class="k-d-flex k-flex-col k-gap-2">
+        <div class="k-d-flex k-align-items-center k-gap-3"><span class="k-icon k-svg-icon k-svg-i-check k-color-primary" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+            <div>Modulos</div>
+        </div>
+        <div class="k-d-flex k-align-items-center k-gap-3"><span class="k-icon k-svg-icon k-svg-i-check k-color-primary" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+            <div>Sitio Web</div>
+        </div>
+        <div class="k-d-flex k-align-items-center k-gap-3"><span class="k-icon k-svg-icon k-svg-i-check k-color-primary" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+            <div>Capacitación</div>
+        </div><div class="k-d-flex k-align-items-center k-gap-3"><span class="k-icon k-svg-icon k-svg-i-check k-color-primary" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+            <div>Atención 12/5</div></div><div class="k-d-flex k-align-items-center k-gap-3"><span class="k-icon k-svg-icon k-svg-i-check k-color-primary" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+                <div>Analisis de Negocio</div></div>
+    </div>
+    <div class="k-d-flex k-flex-col k-gap-6">
+        <div class="k-d-flex k-flex-col k-text-center"><h3 class="k-h3 !k-m-0">$50</h3>
+            <div class="k-font-size-sm k-color-subtle">Mensuales</div></div><button id="btn-one" class="k-button k-button-lg k-button-solid k-button-solid-tertiary k-rounded-md">
+                <span class="k-button-text">Buy Now</span></button>
+        </div>
+    </div>
+</div>
+<div class="k-d-flex k-flex-col k-bg-surface-alt k-elevation-1 k-rounded-lg k-overflow-hidden" style="min-height:665px">
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
+    <div class="k-container !k-flex-row k-gap-5 k-gap-md-10 k-gap-lg-14 k-flex-wrap k-px-4"><div class="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-14">
+        <div class="k-d-flex k-flex-col k-gap-4">
+            <h2 id="title-module" class="k-h2 !k-m-0 k-color-primary">Quienes Somos <hr></h2> 
+            <p id="texto-module" class="k-font-size-lg k-color-subtle !k-m-0">Desde hace 20 años, hemos sido pioneros en el desarrollo de sistemas ERP, estableciendo un estándar de excelencia en la industria. Nuestra empresa se especializa en ofrecer soluciones integrales que optimizan los procesos empresariales, gracias a nuestra vasta experiencia y compromiso con la calidad.
+               <br><br>
+                Nos enorgullece estar a la vanguardia de las mejores prácticas de programación, lo que nos permite mantener nuestro software en constante evolución y adaptación a las necesidades del mercado. <br><br>La innovación y la mejora continua son los pilares de nuestra filosofía, asegurando que nuestros clientes cuenten con herramientas robustas y eficientes para gestionar sus operaciones.
+                <br>br
+                Elegirnos significa optar por la mejor solución ERP, respaldada por dos décadas de experiencia y un firme compromiso con la excelencia. Estamos aquí para acompañar a tu empresa en cada etapa del camino, garantizando un servicio de primera y resultados excepcionales.</p>
+        </div>
+        <div class="k-d-flex k-flex-col k-gap-10">
+            <div class="k-d-flex k-gap-4">
                 
-                <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
-                    <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
-                </svg>
-            </span>
-            OUR SERVICE
-        </a>
-<div class="loader_position">     
-<div class="loader-container">
-    <div class="loader">
-    <div class="loader-inner"></div>
-    <div class="loader-inner"></div>
-    <div class="loader-inner"></div>
-    <div class="loader-inner"></div>
-    <div class="loader-inner"></div>
-    <div class="loader-inner"></div>
-    <div class="loader-inner"></div>
-    <div class="loader-inner"></div>
-  </div>
-</div>
-</div>
-
-    </div>
-    <div class="cintillo_1">
-        <div class="parte-izquierda_1"><img src="img/rectangulo-redondeado.png" alt="" class="img_cintillo"></div>
-        <div class="parte-centro_1"><img src="img/rectangulo-redondeado.png" alt="" class="img_cintillo"></div>
-        <div class="parte-derecha_1"><img src="img/rectangulo-redondeado.png" alt="" class="img_cintillo"></div>
-        <div class="favicons-float">
-            <img src="img/pc-de-escritorio.png" alt="Favicon 1" class="float_1">
-            <img src="favicon2.ico" alt="Favicon 2" class="float_2">
-            <img src="favicon3.ico" alt="Favicon 3" class="float_3">
+            </div>
+            
         </div>
-        <div class="titulo-flotante_1"><h1>Hola</h1></div>
     </div>
+    
+</div>
+</section>
+<section class="k-bg-surface k-pt-24 k-pb-30"></section>
+<section class="k-bg-app-surface k-py-8">
+    <div id="div-card_2" class="k-d-flex k-flex-col k-gap-5 k-gap-md-10 k-align-items-center k-py-8 k-py-md-16 k-px-4 k-px-md-19 k-px-lg-24 k-bg-primary k-color-white k-rounded-xl k-mx-auto k-box-sizing-border" style="max-width:935px;margin-top:-14rem">
+        <div class="k-d-flex k-flex-col k-align-items-center k-gap-4"><h2  class="k-h2 !k-m-0 k-text-center">Start your 14-Day Free Trial</h2><p class="k-font-size-lg k-text-center !k-m-0">Many desktop publishing packages and web page editors now use Lorem Ipsum.</p>
+    </div>
+    <div class="k-d-flex k-justify-content-center" style="width:488px;max-width:100%"><span style="width:488px" class="k-textbox k-input k-input-md k-input-solid k-rounded-md"><input class="k-input-inner" placeholder="Your email" name="trial-email"/><span class="k-input-suffix k-input-suffix-horizontal"><button id="btn-one" class="k-button k-button-md k-button-solid k-button-solid-tertiary k-rounded-md"><span class="k-button-text">Sign up Free</span></button></span></span>
+    </div>
+    <div class="k-d-flex k-flex-col k-flex-sm-row k-justify-content-center k-gap-4 k-gap-sm-10 k-flex-wrap">
+        <div class="k-d-flex k-align-items-center k-gap-2"><span class="k-icon k-svg-icon k-svg-i-check" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+            <div>Gratis 30-dias</div>
+        </div><div class="k-d-flex k-align-items-center k-gap-2"><span class="k-icon k-svg-icon k-svg-i-check" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+            <div>No se requiere tarjeta de crédito</div>
+        </div>
+        <div class="k-d-flex k-align-items-center k-gap-2"><span class="k-icon k-svg-icon k-svg-i-check" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+            <div>Soporte 12/7</div>
+        </div>
+        <div class="k-d-flex k-align-items-center k-gap-2"><span class="k-icon k-svg-icon k-svg-i-check" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.7 82.7 480 128 192 416 32 256l45.3-45.3L192 325.5z" /></svg></span>
+            <div>Cancela en cualquier momento</div>
+        </div>
+    </div>
+</div>
+</section>
+<section id="div-card_3" class="k-bg-app-surface k-py-8 k-py-md-10 k-py-lg-15 k-color-subtle">
+    <div class="k-container"><div class="k-d-grid k-grid-cols-1 k-grid-cols-md-2 k-grid-cols-lg-6 k-gap-5 k-px-4">
+        <div class="k-d-flex k-flex-col k-gap-10 k-col-span-lg-2"><img src="" alt="Logo" width="128px" height="36px" class="logo-large"/><div class="k-d-flex k-flex-col k-gap-4">
+            <div class="k-d-flex k-gap-2"><span class="k-icon k-svg-icon k-svg-i-map-marker-target k-color-tertiary k-icon-md k-flex-shrink-0" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C158.8 0 80 78.8 80 176s176 336 176 336 176-238.8 176-336S353.2 0 256 0m0 288c-61.9 0-112-50.1-112-112S194.1 64 256 64s112 50.1 112 112-50.1 112-112 112m48-112c0 26.5-21.5 48-48 48s-48-21.5-48-48 21.5-48 48-48 48 21.5 48 48" /></svg></span><p class="!k-m-0">Bayamon, Puerto Rico</p>
+            </div>
+            <div class="k-d-flex k-gap-2"><span class="k-icon k-svg-icon k-svg-i-envelope k-color-tertiary k-icon-md k-flex-shrink-0" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 96c-17.7 0-32 14.3-32 32v256c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32zm23.7 32L256 296.3 424.3 128c11 2.9 19.7 11.6 22.6 22.6L342.6 254.9l104.3 104.3c-2.9 11-11.6 19.7-22.6 22.6L320 277.5l-64 64-64-64L87.7 381.8c-11-2.9-19.7-11.6-22.6-22.6l104.3-104.3L65.1 150.6c2.9-11 11.6-19.7 22.6-22.6" /></svg></span><p class="!k-m-0">+456 842 364 120</p>
+            </div>
+            <div class="k-d-flex k-gap-2"><span class="k-icon k-svg-icon k-svg-i-envelope k-color-tertiary k-icon-md k-flex-shrink-0" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 96c-17.7 0-32 14.3-32 32v256c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32zm23.7 32L256 296.3 424.3 128c11 2.9 19.7 11.6 22.6 22.6L342.6 254.9l104.3 104.3c-2.9 11-11.6 19.7-22.6 22.6L320 277.5l-64 64-64-64L87.7 381.8c-11-2.9-19.7-11.6-22.6-22.6l104.3-104.3L65.1 150.6c2.9-11 11.6-19.7 22.6-22.6" /></svg></span><p class="!k-m-0">customerservice@aswspr.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="k-d-flex k-flex-col k-flex-1 k-gap-5">
+        <div id="color-subtitulos" class="k-font-size-lg k-font-bold k-color-primary">Services</div>
+        <div class="k-d-flex k-flex-col k-gap-3"><a href="#" class="k-link">Tiempo y Asistencia <a href="#" class="k-link">Nomina</a><a href="#" class="k-link">Ordenes de Venta</a><a href="#" class="k-link"></a><a href="#" class="k-link"></a>
+        </div>
    
-    <div class="loader_2">
-        <div class="quater i"></div>
-        <div class="quater ii"></div>
-    </div>
-</body>
-</html>
+    </div></div></div></section><!--astro:end--></astro-island>  
+                            </body></html>
